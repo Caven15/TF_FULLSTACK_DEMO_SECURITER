@@ -17,7 +17,8 @@ namespace DemoSecurityDal.Mapper
                 Id = (int)record["Id"],
                 Nom = (string)record["Nom"],
                 Email = (string)record["Email"],
-                DateNaissance = (DateTime)record["DateNaissance"]
+                DateNaissance = (DateTime)record["DateNaissance"],
+                RoleId = (int)record["RoleId"]
             };
         }
     }

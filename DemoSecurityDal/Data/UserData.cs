@@ -13,5 +13,6 @@ namespace DemoSecurityDal.Data
         public string Email { get; set; } = String.Empty;
         public DateTime DateNaissance { get; set; }
         public string? Password { get; set; }
+        public int RoleId { get; set; }
     }
 }

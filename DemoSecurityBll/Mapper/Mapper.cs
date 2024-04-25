@@ -31,7 +31,8 @@ namespace DemoSecurityBll.Mapper
                 Nom = data.Nom,
                 Email = data.Email,
                 DateNaissance = data.DateNaissance,
-                Password = data.Password
+                Password = data.Password,
+                RoleId = data.RoleId
             };
         }
     }

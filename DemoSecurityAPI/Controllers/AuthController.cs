@@ -76,12 +76,32 @@ namespace DemoSecurityAPI.Controllers
             }
         }
 
+        [HttpGet(nameof(TestRouteConnected))]
         [Authorize]
-        [HttpGet(nameof(Test))]
-        public IActionResult Test()
+        public IActionResult TestRouteConnected()
         {
-            return Ok("Accès autorisé");
+            return Ok("Accès autorisé pour les personnes connectées peut importe le role");
         }
 
+        [HttpGet(nameof(TestRouteUser))]
+        [Authorize(Roles = "1")]
+        public IActionResult TestRouteUser()
+        {
+            return Ok("Accès autorisé pour les utilisateurs");
+        }
+
+        [HttpGet(nameof(TestRouteModo))]
+        [Authorize(Roles = "2")]
+        public IActionResult TestRouteModo()
+        {
+            return Ok("Accès autorisé pour les Modo");
+        }
+
+        [HttpGet(nameof(TestRouteAdmin))]
+        [Authorize(Roles = "3")]
+        public IActionResult TestRouteAdmin()
+        {
+            return Ok("Accès autorisé pour les Admin");
+        }
     }
 }

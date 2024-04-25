@@ -6,6 +6,8 @@
 	[DateNaissance] DATE NOT NULL,
 	[PasswordHash] BINARY(64) NOT NULL,
 	[SecurityStamp] UNIQUEIDENTIFIER NOT NULL,
+	[RoleId] INT,
 
-	CONSTRAINT [PK_UTilisateur] PRIMARY KEY ([Id])
-)
+	CONSTRAINT [PK_UTilisateur] PRIMARY KEY ([Id]),
+	CONSTRAINT [FK_Utilisareur_Role] FOREIGN KEY ([RoleId]) REFERENCES [dbo].[Role]([Id])
+) 

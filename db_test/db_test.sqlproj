@@ -60,12 +60,16 @@
     <Folder Include="Programability" />
     <Folder Include="Programability\Functions" />
     <Folder Include="Programability\SP" />
+    <Folder Include="Programability\SP\Auth" />
+    <Folder Include="Programability\SP\Seed" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\User.sql" />
     <Build Include="Programability\Functions\FHasher.sql" />
-    <Build Include="Programability\SP\SPUserRegister.sql" />
-    <Build Include="Programability\SP\SPUserLogin.sql" />
+    <Build Include="Tables\Role.sql" />
+    <Build Include="Programability\SP\Auth\SPUserLogin.sql" />
+    <Build Include="Programability\SP\Auth\SPUserRegister.sql" />
+    <Build Include="Programability\SP\Seed\SPAjoutRole.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="db_test.publish.xml" />

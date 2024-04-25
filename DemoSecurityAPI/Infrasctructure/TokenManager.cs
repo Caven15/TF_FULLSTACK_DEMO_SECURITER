@@ -33,9 +33,10 @@ namespace DemoSecurityAPI.Infrasctructure
             // Création des revendications pour les stocker dans le token
             Claim[] myClaims = new Claim[]
             {
-                new Claim(ClaimTypes.Sid, user.id.ToString()),
+                new Claim(ClaimTypes.Sid, user.Id.ToString()),
                 new Claim(ClaimTypes.GivenName, user.Nom),
-                new Claim(ClaimTypes.Expiration, now.AddHours(expirationDate).ToString(), ClaimValueTypes.DateTime)
+                new Claim(ClaimTypes.Expiration, now.AddHours(expirationDate).ToString(), ClaimValueTypes.DateTime),
+                new Claim(ClaimTypes.Role, user.RoleId.ToString())
             };
 
             JwtSecurityToken token = new JwtSecurityToken(
